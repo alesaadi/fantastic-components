@@ -11,7 +11,7 @@ const RootStyled = styled.aside`
         position: fixed;
         overflow: hidden;
         z-index: 8;     
-        ${(props) => (props.theme.rtl || props.openFromRight) ? 'right:0' : 'lef:0'}
+        ${(props) => (props.theme.rtl || props.openFromRight) ? 'right:0' : 'left:0'};
      
               `;
 export default RootStyled;
