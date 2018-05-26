@@ -2,12 +2,10 @@
  * Created by Programmer1 on 12/16/2017.
  */
 import styled from 'styled-components';
-import {getBorderColor  } from './Statics';
+import {getBorderColor} from './Statics';
 
-const NavStyled = styled.nav`    
- 
-        
-        maxWidth: 300px;
+const NavStyled = styled.nav`        
+        max-width: 300px;
         height: 100%;
         background: #FFF;
         box-shadow: 2px 0 12px rgba(0,0,0,0.4);
