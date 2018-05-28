@@ -38,6 +38,8 @@ import Notify from '../src/Notify/Notify';
 import ToolTip from '../src/ToolTip/ToolTip';
 import CheckBox from '../src/CheckBox/CheckBox';
 import Table from '../src/Table/Table';
+import Drawer from '../src/Drawer/Drawer';
+import DrawerIcon from '../src/Drawer/DrawerIcon';
 
 
 import BehzadiComponents from './BehzadiComponents';
@@ -201,6 +203,7 @@ class App extends Component {
         padding: '50px'
       }}>
         <br/>
+
         <Table
           rowsCount={this.state.admins.length}
           columns={[
@@ -768,6 +771,29 @@ class App extends Component {
         </div>
         <ThemeProvider theme={defaultTheme}>
           <div>
+            <br/>
+            <br/>
+            <Drawer
+              showNav={this.state.showNav}
+              onHideNav={() => this.setState({showNav: false})}
+              title="Hello World"
+              items={mainItems}
+              //openFromRight={true}
+              primary
+              children={
+                <div>
+                  test
+                </div>
+              }
+            />
+            <DrawerIcon
+              onClick={() => this.setState({showNav: true})}
+            />
+            <br/>
+            <br/>
+            <br/> <br/>
+            <br/> <br/>
+            <br/>
             <AlesaadiComponents/>
             <BehzadiComponents/>
 

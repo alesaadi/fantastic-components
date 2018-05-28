@@ -12,8 +12,7 @@ const NavStyled = styled.nav`
         display: flex;
         will-change: transform;
         flex-direction: column;
-        float:${(props) => (props.theme.rtl || props.openFromRight) ? 'right' : 'left'} ;
-        border: 1px solid ${(props) => getBorderColor(props)};
-        
+        float:${(props) => (props.openFromRight) ? 'right' : 'left'};  
+        border: 1px solid ${(props) => getBorderColor(props)};        
               `;
 export default NavStyled;

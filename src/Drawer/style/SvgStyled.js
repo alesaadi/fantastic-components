@@ -8,5 +8,6 @@ const SvgStyled = styled.svg`
         float:${(props) => (props.theme.rtl || props.openFromRight) ? 'right' : 'left'} ;
         fill:${(props) => getBgColor(props)};
         border: 5px solid ${(props) => getBorderColor(props)};
+        cursor: pointer;
               `;
 export default SvgStyled;
