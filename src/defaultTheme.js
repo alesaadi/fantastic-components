@@ -45,7 +45,7 @@ const mutedColor = '#636c72';
 const important = " !important";
 
 const rhThemeBlue = {
-  rtl: false,
+  rtl: true,
   fontFamily: 'IRANSans, Noto, Roboto, sans-serif' + important,
   primaryColor: primaryColor,
   secondaryColor: secondaryColor,

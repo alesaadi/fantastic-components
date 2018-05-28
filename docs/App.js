@@ -773,22 +773,24 @@ class App extends Component {
           <div>
             <br/>
             <br/>
-            <Drawer
-              showNav={this.state.showNav}
-              onHideNav={() => this.setState({showNav: false})}
-              title="Hello World"
-              items={mainItems}
-              //openFromRight={true}
-              primary
-              children={
-                <div>
-                  test
-                </div>
-              }
-            />
-            <DrawerIcon
-              onClick={() => this.setState({showNav: true})}
-            />
+            <Row>
+              <Drawer
+                showNav={this.state.showNav}
+                onHideNav={() => this.setState({showNav: false})}
+                title="Hello World"
+                items={mainItems}
+                //openFromRight={true}
+                primary
+                children={
+                  <div>
+                    test
+                  </div>
+                }
+              />
+              <DrawerIcon
+                onClick={() => this.setState({showNav: true})}
+              />
+            </Row>
             <br/>
             <br/>
             <br/> <br/>

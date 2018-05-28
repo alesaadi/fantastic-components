@@ -6,6 +6,7 @@ const RowStyled = styled.div`
           margin-right: -15px;
           margin-left: -15px; 
           box-sizing: border-box;
+          flex-direction: ${(props) => (props.rtl || props.theme.rtl) ? 'row-reverse' : 'row' };
           
           @media (min-width: 576px) {    
               margin-right: -15px;
