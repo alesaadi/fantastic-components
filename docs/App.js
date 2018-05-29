@@ -773,7 +773,9 @@ class App extends Component {
           <div>
             <br/>
             <br/>
-            <Row>
+            <Row
+              className={'row'}
+            >
               <Drawer
                 showNav={this.state.showNav}
                 onHideNav={() => this.setState({showNav: false})}
@@ -787,9 +789,13 @@ class App extends Component {
                   </div>
                 }
               />
-              <DrawerIcon
-                onClick={() => this.setState({showNav: true})}
-              />
+              <Col
+                className={'col'}
+              >
+                <DrawerIcon
+                  onClick={() => this.setState({showNav: true})}
+                />
+              </Col>
             </Row>
             <br/>
             <br/>

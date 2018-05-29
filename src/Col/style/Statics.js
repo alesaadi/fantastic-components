@@ -28,7 +28,7 @@ function getBgColor(props) {
   } else if (success) {
     bgC = (Object.keys(theme).length > 0 && theme) ? theme.success.color : defaultTheme.success.color;
   } else {
-    bgC = (Object.keys(theme).length > 0 && theme) ? theme.fixColors.white : defaultTheme.fixColors.white;
+    bgC = 'transparent';
   }
   return bgC;
 }
