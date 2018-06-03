@@ -20,7 +20,7 @@ class Input extends Component {
       value
     } = this.props;
     return (
-      <Div style={style} {...this.props}>
+      <Div style={style}>
         {
           label &&
           <Label>
@@ -37,6 +37,7 @@ class Input extends Component {
           value={value}
           key={key}
           name={name}
+          {...this.props}
         />
         {errorText && <Alert>{errorText}</Alert>}
       </Div>
