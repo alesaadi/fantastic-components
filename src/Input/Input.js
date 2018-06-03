@@ -14,24 +14,31 @@ class Input extends Component {
       errorText,
       style,
       important,
-      icon
+      icon,
+      key,
+      name,
+      value
     } = this.props;
     return (
       <Div style={style} {...this.props}>
         {
           label &&
-          <Label {...this.props}>
+          <Label>
             {label}
             {
-              important && <Important {...this.props}>*</Important>
+              important && <Important>*</Important>
             }
           </Label>
         }
         {
-          icon && <Icon iconClass={icon} {...this.props}/>
+          icon && <Icon iconClass={icon}/>
         }
-        <InputStyled {...this.props}/>
-        {errorText && <Alert {...this.props}>{errorText}</Alert>}
+        <InputStyled
+          value={value}
+          key={key}
+          name={name}
+        />
+        {errorText && <Alert>{errorText}</Alert>}
       </Div>
     );
   }
@@ -65,8 +72,9 @@ Input.propTypes = {
   foreColor: PropTypes.string,
   theme: PropTypes.object,
   style: PropTypes.object,
-  noMargin:PropTypes.bool,
-  error:PropTypes.bool
+  key: PropTypes.object,
+  noMargin: PropTypes.bool,
+  error: PropTypes.bool
 };
 
 export default Input;
