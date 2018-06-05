@@ -112,12 +112,17 @@ class App extends Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleCheeseChange = this.handleCheeseChange.bind(this);
+    this.onClickIcon = this.onClickIcon.bind(this);
+  }
+
+  onClickIcon() {
+    alert('user');
   }
 
   handleCheeseChange(event) {
     this.setState({
       cheeseIsReady: !this.state.cheeseIsReady
-    })
+    });
   }
 
   openModal() {
@@ -422,6 +427,7 @@ class App extends Component {
               errorText={'error'}
               placeholder={'success'}
               noMargin
+              onClickIcon={this.onClickIcon}
             />
             <br/>
             <Input
