@@ -420,8 +420,9 @@ class App extends Component {
             <Breadcrumb items={BreadcrumbList}
                         returnPath={(path) => console.log('path', path)}
             />
-            App...
+
             <Input
+              label={'user'}
               icon={'user'}
               primary
               errorText={'error'}
