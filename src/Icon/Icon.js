@@ -11,13 +11,15 @@ class Icon extends Component {
 
   render() {
     const {
-      iconClass
+      iconClass,
+      onMouseDownIcon
     } = this.props;
 
     return (
       <IconStyled
         {...this.props}
         onClick={this.props.onClick}
+        onMouseDown={onMouseDownIcon}
         className={`fa fa-${iconClass}`}
         aria-hidden="true"
       />
@@ -30,6 +32,7 @@ Icon.propTypes = {
   iconClass: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
+  onMouseDownIcon: PropTypes.func,
   theme: PropTypes.object,
   style: PropTypes.object,
   color: PropTypes.string,

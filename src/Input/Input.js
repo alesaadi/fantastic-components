@@ -18,7 +18,8 @@ class Input extends Component {
       key,
       name,
       value,
-      onClickIcon
+      onClickIcon,
+      onMouseDownIcon
     } = this.props;
     return (
       <Div style={style}>
@@ -35,6 +36,7 @@ class Input extends Component {
           icon && <Icon
             iconClass={icon}
             onClick={onClickIcon}
+            onMouseDownIcon={onMouseDownIcon}
           />
         }
         <InputStyled
@@ -52,6 +54,7 @@ class Input extends Component {
 Input.propTypes = {
   label: PropTypes.string,
   onChange: PropTypes.func,
+  onMouseDownIcon: PropTypes.func,
   onClickIcon: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
