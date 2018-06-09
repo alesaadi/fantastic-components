@@ -113,12 +113,17 @@ class App extends Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleCheeseChange = this.handleCheeseChange.bind(this);
+    this.onClickIcon = this.onClickIcon.bind(this);
+  }
+
+  onClickIcon() {
+    alert('user');
   }
 
   handleCheeseChange(event) {
     this.setState({
       cheeseIsReady: !this.state.cheeseIsReady
-    })
+    });
   }
 
   openModal() {
@@ -421,13 +426,15 @@ class App extends Component {
             <Breadcrumb items={BreadcrumbList}
                         returnPath={(path) => console.log('path', path)}
             />
-            App...
+
             <Input
+              label={'user'}
               icon={'user'}
               primary
               errorText={'error'}
               placeholder={'success'}
               noMargin
+              onClickIcon={this.onClickIcon}
             />
             <br/>
             <Input

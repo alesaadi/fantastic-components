@@ -20,9 +20,12 @@ class Container extends Component {
 }
 
 Container.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 
 export default Container;
