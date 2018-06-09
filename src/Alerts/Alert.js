@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AlertStyled from './style/AlertStyled';
 import Image from '../Image/Img';
+
 class Alert extends Component {
   render() {
     const {

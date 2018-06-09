@@ -55,6 +55,5 @@ module.exports = {
   Window: require('./Window/Window').default,
   DatePicker: require('./DatePicker/english/DatePicker').default,
   ToolTip: require('./ToolTip/ToolTip').default,
-  styled: require('styled-components').default,
-  Alert: require('styled-components').default
+  Alert: require('./Alerts/Alert').default
 };
