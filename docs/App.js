@@ -40,6 +40,7 @@ import CheckBox from '../src/CheckBox/CheckBox';
 import Table from '../src/Table/Table';
 import Drawer from '../src/Drawer/Drawer';
 import DrawerIcon from '../src/Drawer/DrawerIcon';
+import Alert from '../src/Alerts/Alert';
 
 
 import BehzadiComponents from './BehzadiComponents';
@@ -202,6 +203,11 @@ class App extends Component {
       <div style={{
         padding: '50px'
       }}>
+        <br/>
+        <br/>
+        <Alert
+          title={'error'}
+        />
         <br/>
 
         <Table
