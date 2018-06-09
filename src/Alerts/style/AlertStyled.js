@@ -2,7 +2,7 @@
  * Created by Programmer1 on 12/4/2017.
  */
 import styled from 'styled-components';
-import {getBgColor, getBorderColor, getColor} from "../../Button/style/Statics";
+import {getColor, getBgColor, getBorderColor} from './Statics';
 
 const Alert = styled.div`            
       display: flex;
