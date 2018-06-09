@@ -86,7 +86,8 @@ Input.propTypes = {
   style: PropTypes.object,
   key: PropTypes.object,
   noMargin: PropTypes.bool,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  maxWidth: PropTypes.string
 };
 
 export default Input;

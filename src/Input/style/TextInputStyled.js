@@ -2,7 +2,7 @@
  * Created by Programmer1 on 12/4/2017.
  */
 import styled from 'styled-components';
-import { getColor, getBorderColor } from './Statics';
+import {getColor, getBorderColor} from './Statics';
 import defaultTheme from '../../defaultTheme';
 
 const TextAriaStyled = styled.input` 
@@ -13,6 +13,7 @@ const TextAriaStyled = styled.input`
                 font-size: 14px;
                 line-height: 1.42857143;
                 color: ${(props) => getColor(props)};
+                max-width: ${(props) => (props.maxWidth) ? `${props.maxWidth}` : ''};
                 border: 1px solid ${(props) => (props.error) ? `${(Object.keys(props.theme).length > 0 && props.theme) ? props.theme.fixColors.red : defaultTheme.fixColors.red}` : `${getBorderColor(props)}`};
                 ::placeholder {
                   color: ${(props) => (props.error) && `${(Object.keys(props.theme).length > 0 && props.theme) ? props.theme.fixColors.red : defaultTheme.fixColors.red}`}; 
