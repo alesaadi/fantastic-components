@@ -55,7 +55,7 @@ class Search extends Component {
         maxCount = suggestionCount;
       }
       for (let i = 0; i < maxCount; i += 1) {
-        const { id } = suggestionList[i];
+        const {id} = suggestionList[i];
         const val = suggestionList[i].value;
         if (val.toLowerCase().includes(value.toLowerCase())) {
           const obj = {
@@ -88,13 +88,13 @@ class Search extends Component {
   }
 
   onSearchClick() {
-    const { onSearch } = this.props;
+    const {onSearch} = this.props;
     onSearch(this.state.value);
   }
 
 
   render() {
-    const { async, suggestionCount, suggestionList } = this.props;
+    const {async, suggestionCount, suggestionList} = this.props;
 
     let searchedArray = [];
     if (async) {
@@ -108,6 +108,7 @@ class Search extends Component {
     return (
       <AutoCompelete>
         <Input
+          {...this.props}
           icon="search"
           onKeyUp={(e) => {
             if (e.keyCode === 13) {
@@ -135,8 +136,6 @@ class Search extends Component {
             });
           }}
           errorText={this.props.errorText}
-          {...this.props}
-
         />
         <OutsideAlerter
           onOutsideClick={() => {
