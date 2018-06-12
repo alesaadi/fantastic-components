@@ -135,8 +135,7 @@ class Search extends Component {
             });
           }}
           errorText={this.props.errorText}
-
-
+          {...this.props}
         />
         <OutsideAlerter
           onOutsideClick={() => {
